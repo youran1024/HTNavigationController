@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HTPushViewController.h"
 
-
+@class HTPushViewController;
 @interface HTNavigationController : UIViewController
 
-@property (nonatomic, strong)   UIViewController *topViewController;
+@property (nonatomic, strong)   HTPushViewController *topViewController;
 @property (nonatomic, strong)   NSMutableArray *viewControllers;
-@property (nonatomic, strong)   UIViewController *rootViewController;
-//@property (nonatomic, strong)   UINavigationBar *navigationBar;
+@property (nonatomic, strong)   HTPushViewController *rootViewController;
+
 
 - (id)initWithRootViewController:(UIViewController *)viewController;
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
@@ -24,19 +25,3 @@
 - (void)popToViewController:(UIViewController *)viewController animated:(BOOL)animated;
 @end
 
-@interface HTNavigationBar : UIView
-{
-    UIView *_titleView;
-
-}
-@property (nonatomic, strong)   UIView *leftView;
-@property (nonatomic, strong)   UIView *rightView;
-@property (nonatomic, strong)   UIView *titleView;
-
-@end
-
-@interface HTNavigationItem : UINavigationItem
-
-@property (nonatomic, strong)   HTNavigationBar *htNavigationBar;
-
-@end

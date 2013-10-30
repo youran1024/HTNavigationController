@@ -9,10 +9,4 @@
 #import <UIKit/UIKit.h>
 #import "HTNavigationController.h"
 
-@interface UIViewController (HTNavigationPush)
 
-@property (nonatomic, retain)   HTNavigationController *navigationController;
-@property (nonatomic, retain)   HTNavigationItem  *navigationItem;
-@property (nonatomic, retain)   HTNavigationBar *navigationBar;
-
-@end

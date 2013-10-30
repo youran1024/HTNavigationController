@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		5AC1AD1B1820CD85003439A3 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC1AD1A1820CD85003439A3 /* banner@2x.png */; };
 		5AC1AD1D1820CE11003439A3 /* banner_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC1AD1C1820CE11003439A3 /* banner_button@2x.png */; };
-		5AD70B55181F673A00BCA5F9 /* UIViewController+HTNavigationPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD70B54181F673A00BCA5F9 /* UIViewController+HTNavigationPush.m */; };
-		5AD70B58181F693C00BCA5F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD70B57181F693C00BCA5F9 /* ViewController.m */; };
+		5AC1AD211820FB34003439A3 /* HTPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1AD201820FB34003439A3 /* HTPushViewController.m */; };
 		5AFDB63D181F5A36009C171C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFDB63C181F5A36009C171C /* Foundation.framework */; };
 		5AFDB63F181F5A36009C171C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFDB63E181F5A36009C171C /* CoreGraphics.framework */; };
 		5AFDB641181F5A36009C171C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFDB640181F5A36009C171C /* UIKit.framework */; };
@@ -39,10 +38,8 @@
 /* Begin PBXFileReference section */
 		5AC1AD1A1820CD85003439A3 /* banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@2x.png"; sourceTree = "<group>"; };
 		5AC1AD1C1820CE11003439A3 /* banner_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner_button@2x.png"; sourceTree = "<group>"; };
-		5AD70B53181F673A00BCA5F9 /* UIViewController+HTNavigationPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HTNavigationPush.h"; sourceTree = "<group>"; };
-		5AD70B54181F673A00BCA5F9 /* UIViewController+HTNavigationPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HTNavigationPush.m"; sourceTree = "<group>"; };
-		5AD70B56181F693C00BCA5F9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5AD70B57181F693C00BCA5F9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5AC1AD1F1820FB34003439A3 /* HTPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTPushViewController.h; sourceTree = "<group>"; };
+		5AC1AD201820FB34003439A3 /* HTPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTPushViewController.m; sourceTree = "<group>"; };
 		5AFDB639181F5A36009C171C /* HTNavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTNavigationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFDB63C181F5A36009C171C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5AFDB63E181F5A36009C171C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,10 +89,8 @@
 			children = (
 				5AFDB66B181F5ABA009C171C /* HTNavigationController.h */,
 				5AFDB66C181F5ABA009C171C /* HTNavigationController.m */,
-				5AD70B53181F673A00BCA5F9 /* UIViewController+HTNavigationPush.h */,
-				5AD70B54181F673A00BCA5F9 /* UIViewController+HTNavigationPush.m */,
-				5AD70B56181F693C00BCA5F9 /* ViewController.h */,
-				5AD70B57181F693C00BCA5F9 /* ViewController.m */,
+				5AC1AD1F1820FB34003439A3 /* HTPushViewController.h */,
+				5AC1AD201820FB34003439A3 /* HTPushViewController.m */,
 				5AC1AD1A1820CD85003439A3 /* banner@2x.png */,
 				5AC1AD1C1820CE11003439A3 /* banner_button@2x.png */,
 				5AFDB642181F5A36009C171C /* HTNavigationController */,
@@ -264,9 +259,8 @@
 			files = (
 				5AFDB64D181F5A36009C171C /* AppDelegate.m in Sources */,
 				5AFDB66D181F5ABA009C171C /* HTNavigationController.m in Sources */,
-				5AD70B55181F673A00BCA5F9 /* UIViewController+HTNavigationPush.m in Sources */,
+				5AC1AD211820FB34003439A3 /* HTPushViewController.m in Sources */,
 				5AFDB649181F5A36009C171C /* main.m in Sources */,
-				5AD70B58181F693C00BCA5F9 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
