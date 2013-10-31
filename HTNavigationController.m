@@ -97,9 +97,8 @@
 
 - (void)initViewController:(HTPushViewController *)viewController
 {
-
-    [self addNavigationBarToViewController:viewController];
     [self initNavigationItem:viewController];
+    [self addNavigationBarToViewController:viewController];
     
     UILabel *titleLabel  = (UILabel *)viewController.navigationBar.titleView;
     titleLabel.text = viewController.title;
@@ -238,6 +237,7 @@
     if (self.viewControllers.count > 1) {
         navItem.leftBarButtonItem = [self backBarButtonItem];
     }
+    
 }
 
 - (UIBarButtonItem *)backBarButtonItem

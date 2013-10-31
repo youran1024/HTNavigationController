@@ -17,22 +17,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
-    
-    self.title = @"hello";
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(100, 100, 100, 100);
-    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    
-}
-
-- (void)buttonClicked:(UIButton *)button
-{
-    HTPushViewController *vc = [[HTPushViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (HTNavigationBar *)navigationBar
@@ -177,7 +162,7 @@
 
 - (void)setLeftBarButtonItems:(NSArray *)leftBarButtonItems
 {
-    
+    [self.htNavigationBar setLeftView:[self barButtonItemsView:leftBarButtonItems]];
 }
 
 - (void)setRightBarButtonItem:(UIBarButtonItem *)rightBarButtonItem
@@ -187,7 +172,28 @@
 
 - (void)setRightBarButtonItems:(NSArray *)rightBarButtonItems
 {
-    
+    [self.htNavigationBar setRightView:[self barButtonItemsView:rightBarButtonItems]];
+}
+
+- (UIView *)barButtonItemsView:(NSArray *)barButtonItems
+{
+    UIView *itemView = [[UIView alloc] init];
+    CGFloat margin = 5.0f;
+    CGFloat width = .0f;
+    CGFloat height = CGRectGetHeight(self.htNavigationBar.frame);
+    CGRect rect;
+    for (UIBarButtonItem *item in barButtonItems) {
+        if ([item isKindOfClass:[UIBarButtonItem class]]) {
+            rect = item.customView.frame;
+            rect.origin.x += margin + width;
+            rect.origin.y = (height - CGRectGetHeight(rect)) / 2.0f;
+            item.customView.frame = rect;
+            [itemView addSubview:item.customView];
+            width += (CGRectGetWidth(rect) + margin);
+        }
+    }
+    itemView.frame = CGRectMake(0, 0, width, height);
+    return itemView;
 }
 
 @end

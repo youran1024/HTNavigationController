@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HTNavigationController.h"
+#import "MyViewController.h"
 
 @implementation AppDelegate
 
@@ -19,7 +20,7 @@
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     
-    HTPushViewController *vc = [[HTPushViewController alloc] init];
+    MyViewController *vc = [[MyViewController alloc] init];
     HTNavigationController *nav = [[HTNavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     return YES;
