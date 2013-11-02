@@ -26,16 +26,18 @@
 
 - (void)pushViewController:(HTPushViewController *)showViewController animated:(BOOL)animated
 {
-    //你注掉这段代码会蹦的，找到原因还望告我一下啊。QQ：82314193
+    showViewController.navigationItem.htNavigationBar = showViewController.navigationBar;
+
+    //你注掉这段代码会崩的，找到原因还望告我一下啊。QQ：82314193
     showViewController.view = showViewController.view;
- 
+    
     HTPushViewController *hideViewController = [self.viewControllers lastObject];
     self.topViewController = showViewController;
     [self.viewControllers addObject:showViewController];
-    
     showViewController.navigationController = self;
-
+    
     [self initViewController:showViewController];
+
 
     UIView *hideView = hideViewController.view;
     UIView *showView = showViewController.view;
@@ -102,11 +104,6 @@
 {
     [self initNavigationItem:viewController];
     [self addNavigationBarToViewController:viewController];
-//    if (IOS7_OR_LATER) {
-//        CGRect rect = viewController.navigationBar.frame;
-//        rect.origin.y += 20;
-//        viewController.navigationBar.frame = rect;
-//    }
     
     UILabel *titleLabel  = (UILabel *)viewController.navigationBar.titleView;
     titleLabel.text = viewController.title;

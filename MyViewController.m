@@ -31,18 +31,19 @@
     
     [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button1.backgroundColor = [UIColor redColor];
     button1.frame = CGRectMake(0, 0, 30, 30);
     
-    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     button2.frame = CGRectMake(0, 0, 30, 30);
+    button2.backgroundColor = [UIColor greenColor];
     
     UIBarButtonItem *bar1 = [[UIBarButtonItem alloc] initWithCustomView:button1];
     UIBarButtonItem *bar2 = [[UIBarButtonItem alloc] initWithCustomView:button2];
     
     self.navigationItem.rightBarButtonItems = @[bar1, bar2];
     NSLog(@"%@", self.navigationItem);
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated

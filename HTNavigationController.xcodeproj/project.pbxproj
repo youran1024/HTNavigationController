@@ -17,12 +17,9 @@
 		5AFDB647181F5A36009C171C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDB645181F5A36009C171C /* InfoPlist.strings */; };
 		5AFDB649181F5A36009C171C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDB648181F5A36009C171C /* main.m */; };
 		5AFDB64D181F5A36009C171C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDB64C181F5A36009C171C /* AppDelegate.m */; };
-		5AFDB64F181F5A36009C171C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDB64E181F5A36009C171C /* Images.xcassets */; };
 		5AFDB656181F5A36009C171C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFDB655181F5A36009C171C /* XCTest.framework */; };
 		5AFDB657181F5A36009C171C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFDB63C181F5A36009C171C /* Foundation.framework */; };
 		5AFDB658181F5A36009C171C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFDB640181F5A36009C171C /* UIKit.framework */; };
-		5AFDB660181F5A36009C171C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDB65E181F5A36009C171C /* InfoPlist.strings */; };
-		5AFDB662181F5A36009C171C /* HTNavigationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDB661181F5A36009C171C /* HTNavigationControllerTests.m */; };
 		5AFDB66D181F5ABA009C171C /* HTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDB66C181F5ABA009C171C /* HTNavigationController.m */; };
 /* End PBXBuildFile section */
 
@@ -56,9 +53,6 @@
 		5AFDB64E181F5A36009C171C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5AFDB654181F5A36009C171C /* HTNavigationControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTNavigationControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFDB655181F5A36009C171C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5AFDB65D181F5A36009C171C /* HTNavigationControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HTNavigationControllerTests-Info.plist"; sourceTree = "<group>"; };
-		5AFDB65F181F5A36009C171C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5AFDB661181F5A36009C171C /* HTNavigationControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTNavigationControllerTests.m; sourceTree = "<group>"; };
 		5AFDB66B181F5ABA009C171C /* HTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNavigationController.h; sourceTree = "<group>"; };
 		5AFDB66C181F5ABA009C171C /* HTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +101,6 @@
 				5AC1AD1A1820CD85003439A3 /* banner@2x.png */,
 				5AC1AD1C1820CE11003439A3 /* banner_button@2x.png */,
 				5AFDB642181F5A36009C171C /* HTNavigationController */,
-				5AFDB65B181F5A36009C171C /* HTNavigationControllerTests */,
 				5AFDB63B181F5A36009C171C /* Frameworks */,
 				5AFDB63A181F5A36009C171C /* Products */,
 			);
@@ -151,24 +144,6 @@
 				5AFDB645181F5A36009C171C /* InfoPlist.strings */,
 				5AFDB648181F5A36009C171C /* main.m */,
 				5AFDB64A181F5A36009C171C /* HTNavigationController-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5AFDB65B181F5A36009C171C /* HTNavigationControllerTests */ = {
-			isa = PBXGroup;
-			children = (
-				5AFDB661181F5A36009C171C /* HTNavigationControllerTests.m */,
-				5AFDB65C181F5A36009C171C /* Supporting Files */,
-			);
-			path = HTNavigationControllerTests;
-			sourceTree = "<group>";
-		};
-		5AFDB65C181F5A36009C171C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5AFDB65D181F5A36009C171C /* HTNavigationControllerTests-Info.plist */,
-				5AFDB65E181F5A36009C171C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -250,7 +225,6 @@
 			files = (
 				5AC1AD1D1820CE11003439A3 /* banner_button@2x.png in Resources */,
 				5AFDB647181F5A36009C171C /* InfoPlist.strings in Resources */,
-				5AFDB64F181F5A36009C171C /* Images.xcassets in Resources */,
 				5AC1AD1B1820CD85003439A3 /* banner@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFDB660181F5A36009C171C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFDB662181F5A36009C171C /* HTNavigationControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +273,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				5AFDB646181F5A36009C171C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5AFDB65E181F5A36009C171C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AFDB65F181F5A36009C171C /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

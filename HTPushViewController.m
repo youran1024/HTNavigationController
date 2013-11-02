@@ -172,6 +172,7 @@
 
 - (void)setRightBarButtonItems:(NSArray *)rightBarButtonItems
 {
+    NSLog(@"ht bar:%@", self.htNavigationBar);
     [self.htNavigationBar setRightView:[self barButtonItemsView:rightBarButtonItems]];
 }
 
