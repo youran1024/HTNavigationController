@@ -6,6 +6,7 @@
 //  Copyright (c) 2013年 Hunter. All rights reserved.
 //
 
+
 #import "MyViewController.h"
 
 @interface MyViewController ()
@@ -21,11 +22,13 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     
     static NSInteger i = 0;
-    self.title = [NSString stringWithFormat:@"hello, world this is %d", i++];
+    self.title = [NSString stringWithFormat:@"hello, world %d", i++];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [UIColor greenColor];
     button.frame = CGRectMake(100, 100, 100, 100);
     [self.view addSubview:button];
+    
     [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -64,6 +67,13 @@
 
 - (void)buttonClicked:(UIButton *)button
 {
+    UIApplication *app = [UIApplication sharedApplication];
+    if (app.statusBarStyle == UIStatusBarStyleLightContent) {
+        [app setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    }else {
+        [app setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    }
+    
     MyViewController *mvc = [[MyViewController alloc] init];
     [self.navigationController pushViewController:mvc animated:YES];
 }
@@ -71,7 +81,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

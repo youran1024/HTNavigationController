@@ -26,6 +26,9 @@
 
 - (void)pushViewController:(HTPushViewController *)showViewController animated:(BOOL)animated
 {
+    //你注掉这段代码会蹦的，找到原因还望告我一下啊。QQ：82314193
+    showViewController.view = showViewController.view;
+ 
     HTPushViewController *hideViewController = [self.viewControllers lastObject];
     self.topViewController = showViewController;
     [self.viewControllers addObject:showViewController];
@@ -42,12 +45,12 @@
     CGRect  rect    = self.view.frame;
     CGFloat height  = CGRectGetHeight(rect);
     CGFloat width   = CGRectGetWidth(rect);
-    
-    showView.frame = CGRectMake(HTNavigationBarWidth, 0, width, height);
+    CGFloat locationY = ISIOS7 ? 0 : 0;
+    showView.frame = CGRectMake(HTNavigationBarWidth, locationY, width, height);
     [self.view addSubview:showView];
     
     [UIView animateWithDuration:animated ? .5f : 0 animations:^{
-        showView.frame = CGRectMake(0, 0, width, height);
+        showView.frame = CGRectMake(0, locationY, width, height);
         hideView.transform = CGAffineTransformMakeScale(.9, .9);
         hideViewController.maskView.alpha = .6f;
     } completion:^(BOOL finished) {
@@ -99,6 +102,11 @@
 {
     [self initNavigationItem:viewController];
     [self addNavigationBarToViewController:viewController];
+//    if (IOS7_OR_LATER) {
+//        CGRect rect = viewController.navigationBar.frame;
+//        rect.origin.y += 20;
+//        viewController.navigationBar.frame = rect;
+//    }
     
     UILabel *titleLabel  = (UILabel *)viewController.navigationBar.titleView;
     titleLabel.text = viewController.title;
@@ -260,6 +268,7 @@
 
 - (void)addNavigationBarToViewController:(HTPushViewController *)viewController
 {
+//    NSLog(@"%@ \n: %@", viewController, viewController.navigationBar);
     [viewController.view addSubview:viewController.navigationBar];
 }
 

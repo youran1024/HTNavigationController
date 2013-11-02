@@ -39,7 +39,7 @@
 
 @interface HTNavigationItem : UINavigationItem
 
-@property (nonatomic, strong)   HTNavigationBar *htNavigationBar;
+@property (nonatomic, assign)   HTNavigationBar *htNavigationBar;
 
 @end
 

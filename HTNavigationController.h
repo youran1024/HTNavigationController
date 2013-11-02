@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "HTPushViewController.h"
 
+#define ISIOS7   ( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending)
+
 @class HTPushViewController;
 @interface HTNavigationController : UIViewController
 

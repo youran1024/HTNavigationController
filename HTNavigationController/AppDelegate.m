@@ -10,7 +10,9 @@
 #import "HTNavigationController.h"
 #import "MyViewController.h"
 
+
 @implementation AppDelegate
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,6 +21,13 @@
     
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    app.statusBarStyle = UIStatusBarStyleLightContent;
+    
+    CGRect rect = self.window.frame;
+    rect.origin.y = ISIOS7 ? 20 : 0;
+    self.window.frame = rect;
     
     MyViewController *vc = [[MyViewController alloc] init];
     HTNavigationController *nav = [[HTNavigationController alloc] initWithRootViewController:vc];
