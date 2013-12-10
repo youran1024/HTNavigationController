@@ -43,7 +43,7 @@
     UIBarButtonItem *bar2 = [[UIBarButtonItem alloc] initWithCustomView:button2];
     
     self.navigationItem.rightBarButtonItems = @[bar1, bar2];
-    NSLog(@"%@", self.navigationItem);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -69,9 +69,8 @@
 - (void)buttonClicked:(UIButton *)button
 {
     UIApplication *app = [UIApplication sharedApplication];
-    if (app.statusBarStyle == UIStatusBarStyleLightContent) {
-        [app setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-    }else {
+    
+    if (app.statusBarStyle == UIStatusBarStyleDefault) {
         [app setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
     }
     

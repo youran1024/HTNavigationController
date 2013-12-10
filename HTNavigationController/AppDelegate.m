@@ -23,7 +23,7 @@
     [self.window makeKeyAndVisible];
     
     UIApplication *app = [UIApplication sharedApplication];
-    app.statusBarStyle = UIStatusBarStyleLightContent;
+//    app.statusBarStyle = UIStatusBarStyleLightContent;
     
     CGRect rect = self.window.frame;
     rect.origin.y = ISIOS7 ? 20 : 0;
